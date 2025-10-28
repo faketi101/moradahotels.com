@@ -1,7 +1,4 @@
 import React from "react";
-import Header from "./Header";
-
-
 
 const Hero = () => {
   return (
@@ -12,11 +9,9 @@ const Hero = () => {
 
         {/* Content (will stay above overlay) */}
         <div className="relative z-10 h-full">
-          <Header isHero />
           <div className="flex items-center justify-center h-full flex-col">
             <h1 className="text-6xl text-white">A Slice of Paradise</h1>
             <div className="mt-24">
-
               <form className="flex items-center justify-center gap-4">
                 <div className="flex flex-col">
                   <label htmlFor="from" className="text-white">
@@ -64,8 +59,6 @@ const Hero = () => {
           </div>
         </div>
       </div>
-
-      
     </>
   );
 };

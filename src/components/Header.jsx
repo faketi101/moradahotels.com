@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Menu } from "lucide-react";
+import { Menu, X } from "lucide-react";
 
 const navigation = [
   {
@@ -24,7 +24,7 @@ const navigation = [
   },
 ];
 
-const Header = ({ isHero }) => {
+const Header = ({ isHero, isMenuOpen, setIsMenuOpen }) => {
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
@@ -68,7 +68,17 @@ const Header = ({ isHero }) => {
                 {item.name}
               </a>
             ))}
-            <Menu size={28} color="white" />
+            <button
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              className="inline-flex items-center"
+              aria-label="Toggle menu"
+            >
+              {isMenuOpen ? (
+                <X size={28} color="white" />
+              ) : (
+                <Menu size={28} color="white" />
+              )}
+            </button>
           </div>
         </div>
       </div>
