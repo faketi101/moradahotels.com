@@ -1,5 +1,5 @@
-import React from "react";
-import {Menu} from "lucide-react";
+import React, { useState, useEffect } from "react";
+import { Menu } from "lucide-react";
 
 const navigation =[
     {
@@ -26,9 +26,26 @@ const navigation =[
 
 
 
-const Header = ({isHero}) => {
+const Header = ({ isHero }) => {
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const isScrolled = window.scrollY > 100;
+      if (isScrolled !== scrolled) {
+        setScrolled(isScrolled);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, [scrolled]);
+
   return (
-    <header className={`${isHero ? "bg-transparent" : "bg-black"} py-4`}>
+    <header 
+      className={`${isHero && !scrolled ? "bg-transparent" : "bg-black"} py-4 fixed top-0 left-0 right-0 z-50 transition-colors duration-300`}>
       <div className="mx-auto max-w-7xl">
         <div className="flex items-center justify-between h-16 px-4 sm:px-6 lg:px-8">
           <div className="flex-shrink-0">
