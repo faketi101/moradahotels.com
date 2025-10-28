@@ -1,7 +1,7 @@
 import React from "react";
 import { Menu, X } from "lucide-react";
 import { navigation } from "./staticData";
-
+ 
 const Header = ({ isHero, isMenuOpen, setIsMenuOpen, isFixed = true }) => {
   return (
     <header
@@ -18,12 +18,12 @@ const Header = ({ isHero, isMenuOpen, setIsMenuOpen, isFixed = true }) => {
               alt="Your Company"
             />
           </div>
-          <div className="hidden sm:ml-6 sm:flex sm:space-x-8">
+          <div className="sm:ml-6 sm:flex sm:space-x-8">
             {navigation.map((item) => (
               <a
                 key={item.name}
                 href={item.href}
-                className={`inline-flex items-center px-1 pt-1 text-sm ${
+                className={`hidden md:inline-flex items-center px-1 pt-1 text-sm ${
                   isHero ? "text-white" : "text-white"
                 } font-lato`}
               >

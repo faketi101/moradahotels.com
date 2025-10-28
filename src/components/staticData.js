@@ -1,3 +1,5 @@
+export const BOOKING_URL = "https://nobeds.app/DirectForm/Step/1508187590";
+
 export const navigation = [
   {
     name: "Home",
@@ -17,7 +19,7 @@ export const navigation = [
   },
   {
     name: "Book Now",
-    href: "https://nobeds.app/DirectForm/Step/1508187590",
+    href: BOOKING_URL,
   },
   {
     name: "Contact",

@@ -1,14 +1,16 @@
 import React from "react";
 import Hero from "../components/Hero";
 import CTA_TEXT from "../components/CTA_TEXT";
+import Services from "../components/Services";
 import { ArrowRight } from "lucide-react";
+import { BOOKING_URL } from "../components/staticData";
 
 const offers = [
   {
     name: "Gift Voucher",
     img: "/images/offer-gift.jpg",
     description:
-      "Surprise colleagues or relations with the Westine Gift Voucher.",
+      "Surprise colleagues or relations with the Morada Gift Voucher.",
     link: "#",
     link_title: "Read more",
   },
@@ -16,14 +18,14 @@ const offers = [
     name: "Special offers",
     img: "/images/offer-special.jpg",
     description:
-      "Surprise colleagues or relations with the Westine Gift Voucher.",
+      "Surprise colleagues or relations with the Morada Gift Voucher.",
     link: "#",
     link_title: "View offers",
   },
   {
-    name: "Discover Westine",
+    name: "Discover Morada",
     img: "/images/offer-discover.jpg",
-    description: "Explore the Westine Hotels & Spa in Lekki Phase 1 and Lagos",
+    description: "Explore the Morada Hotels & Spa in Lekki Phase 1 and Lagos",
     link: "#",
     link_title: "Read more",
   },
@@ -39,40 +41,55 @@ const HomePage = () => {
             <div className="h-[600px]">
               <img
                 className="w-auto h-full object-cover"
-                src="/images/welcome.jpg"
+                src="/images/offer-discover.jpg"
                 alt="welcome image"
               />
             </div>
             <div className="h-[600px] flex flex-col justify-center items-center">
               <h2 className="text-5xl text-center">
                 Welcome to <br />
-                Westine Hotels & Spa
+                Morada Hotels
               </h2>
               <p className="text-2xl mt-6 text-center max-w-lg ">
-                At Westine Hotels & Spa, we love making our guests feel
-                comfortable, energized, and productive when they stay with us.
-                We do this by combining premium accommodations with great
-                service.
+                MORADA HOTELS combines comfort and charm in every stay. Nestled
+                in picturesque surroundings, our boutique accommodations offer a
+                perfect retreat for travellers seeking relaxation and adventure.
+                Each room is thoughtfully designed to provide a cozy atmosphere,
+                ensuring you feel right at home. Enjoy personalized service and
+                a warm, welcoming environment as you explore local attractions
+                or unwind in our serene spaces. At MORADA HOTELS, we create
+                memorable experiences, whether you’re here for a weekend getaway
+                or an extended stay. Discover the essence of hospitality that
+                sets us apart!
               </p>
-              <button className="bg-black text-4xl text-white px-8 py-4 border border-black mt-16">
+              <a
+                href={BOOKING_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-black text-4xl text-white px-8 py-4 border border-black mt-16"
+              >
                 Book Now
-              </button>
+              </a>
             </div>
           </div>
         </div>
       </section>
 
+      <Services />
+
       <CTA_TEXT
-        title="Your meeting at Westine Hotels & Spa"
-        description="At Westine you find state-of-the-art technology and charming conference rooms, combined with the service of a team that understands the importance of a well-organized meeting."
+        title="Why Choose US"
+        description="At MORADA HOTELS, we offer a welcoming stay with unbeatable comfort and exceptional service. Located in the Serene and secure neighborhood of Awuse estate,Opebi,Ikeja,Lagos, our hotel provides easy access to Murtala Muhammed airport. Enjoy modern rooms, top-notch amenities, and a dedicated team that ensures your stay is relaxing and stress-free. Whether you're here for business or leisure, we make it easy to feel at home.
+
+Book your stay today and experience the best with us!"
         button={{
-          href: "/meetings-events",
-          text: "VIEW OUR CONFERENCE ROOMS",
+          href: BOOKING_URL,
+          text: "BOOK NOW",
         }}
       />
 
       <section
-        className="relative h-[600px] bg-fixed bg-center bg-cover"
+        className="h-[600px] bg-center bg-cover bg-fixed md:bg-fixed bg-scroll"
         style={{ backgroundImage: 'url("/images/cta.jpg")' }}
       ></section>
 
@@ -96,7 +113,7 @@ const HomePage = () => {
             {offers.map((offer) => (
               <div className="flex flex-col items-center" key={offer.name}>
                 <img
-                  className="w-auto h-[500px] object-cover"
+                  className="w-auto max-w-[300px] h-[500px] object-cover"
                   src={offer.img}
                   alt={offer.name}
                 />

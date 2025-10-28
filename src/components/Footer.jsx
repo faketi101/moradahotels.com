@@ -42,7 +42,7 @@ const Footer = () => {
           <p>Morada Hotels & Spa</p>
           <p>16 Babatunde Dabiri Street, Lekki Phase 1</p>
           <p>+234 706 663 4422, +234 906 111 1000</p>
-          <p>reservations@westinehotels.ng</p>
+          <p>reservations@Moradahotels.ng</p>
         </div>
       </div>
 
@@ -51,13 +51,13 @@ const Footer = () => {
         {/* Social Icons */}
         <div className="flex space-x-4 mb-4 md:mb-0">
           <a href="#" className="text-white">
-           <Facebook />
+            <Facebook />
           </a>
           <a href="#" className="text-white">
-           <Twitter />
+            <Twitter />
           </a>
           <a href="#" className="text-white">
-           <Instagram />
+            <Instagram />
           </a>
         </div>
 
