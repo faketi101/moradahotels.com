@@ -1,8 +1,10 @@
 import "./App.css";
 import { useState, useEffect } from "react";
+import { Routes, Route } from "react-router-dom";
 import Header from "./components/Header";
 import Sidebar from "./components/Sidebar";
 import HomePage from "./pages/HomePage";
+import RoomsPage from "./pages/RoomsPage";
 import Footer from "./components/Footer";
 
 function App() {
@@ -78,7 +80,10 @@ function App() {
             isHero={true}
             isFixed={false}
           />
-          <HomePage />
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/rooms" element={<RoomsPage />} />
+          </Routes>
           <Footer />
         </div>
       </div>

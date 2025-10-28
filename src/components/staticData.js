@@ -5,7 +5,7 @@ export const navigation = [
   },
   {
     name: "Our Rooms",
-    href: "/our-rooms",
+    href: "/rooms",
   },
   {
     name: "Restraunt",
