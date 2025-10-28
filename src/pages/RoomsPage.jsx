@@ -1,18 +1,18 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import PageHero from "../components/PageHero";
-import { heroSlides, roomsData } from "../components/staticData";
+import { BOOKING_URL, heroSlides, roomsData } from "../components/staticData";
 
 // make an array of room categories for navigation
-const roomCategories = [
-  "Classic Room",
-  "Studio Room",
-  "Hollywooded (Twin Bed)",
-  "Executive Room",
-  "Classic Suite",
-  "Luxury Suite",
-];
+const roomCategories = ["Deluxe", "Executive", "Superior", "Standard"];
 
 const RoomsPage = () => {
+  const [isDesktop, setIsDesktop] = useState(window.innerWidth >= 768);
+
+  useEffect(() => {
+    const handleResize = () => setIsDesktop(window.innerWidth >= 768);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Slider */}
@@ -49,12 +49,13 @@ const RoomsPage = () => {
             </p>
             <div className="flex flex-col md:flex-row gap-12">
               <h2 className="text-4xl md:text-5xl leading-tight md:w-1/2">
-                Our spacious accommodations are
+                At MORADA HOTELS,
               </h2>
-              <p className="text-base leading-relaxed text-gray-600 md:w-1/2">
-                excellent for a trip with friends, family or as a couple. Each
-                accommodation is fully equipped and furnished to create a
-                pleasant and relaxing atmosphere.
+              <p className="text-base leading-relaxed text-gray-600 md:w-1/2 text-lg md:text-xl">
+                we offer a variety of rooms and suites designed to meet the
+                needs of every traveler. Whether you’re visiting for business,
+                enjoying a romantic getaway, or traveling with family, our
+                accommodations provide comfort, convenience, and style.
               </p>
             </div>
           </div>
@@ -62,43 +63,26 @@ const RoomsPage = () => {
           {/* Rooms Grid Layout */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-24">
             {roomsData.map((room, index) => {
-              // Determine layout variation based on index
-              const isFirstInRow = index % 2 === 0;
-              const showDescription = index === 1; // Only show on Classic Room (index 1)
-              const showPrice = index === 5; // Only show on Premium Deluxe (last item)
+              const getSpace = (index) => {
+                switch (index) {
+                  case 0:
+                    return "10px";
+                  case 1:
+                    return "170px";
+                  case 2:
+                    return "-60px";
+                  case 3:
+                    return "160px";
+                  default:
+                    return "520px";
+                }
+              };
 
               return (
-                <div key={room.id} className="space-y-6">
-                  {/* Top content - varies by position */}
-                  {showDescription && (
-                    <div className="mb-6">
-                      <p className="text-xs tracking-[0.3em] text-gray-500 mb-6 uppercase">
-                        Our Rooms
-                      </p>
-                      <p className="text-base leading-relaxed text-gray-600 mb-8">
-                        {room.description}
-                      </p>
-                    </div>
-                  )}
-
-                  {/* Room title - position varies */}
-                  {!isFirstInRow && !showDescription && (
-                    <div>
-                      <h4 className="text-xl mb-6">{room.name}</h4>
-                    </div>
-                  )}
-
-                  {/* Price section for Premium Deluxe */}
-                  {showPrice && (
-                    <div className="flex items-end justify-between mb-6">
-                      <h4 className="text-xl">{room.name}</h4>
-                      <div className="flex items-center gap-4">
-                        <span className="text-sm text-gray-500">From</span>
-                        <span className="text-2xl">₦ {room.price}</span>
-                      </div>
-                    </div>
-                  )}
-
+                <div
+                  key={room.id}
+                  style={{ marginTop: isDesktop ? getSpace(index) : "10px" }}
+                >
                   {/* Room Image */}
                   <div>
                     <img
@@ -108,28 +92,15 @@ const RoomsPage = () => {
                     />
                   </div>
 
-                  {/* Bottom title for left column items */}
-                  {isFirstInRow && (
-                    <div className="space-y-3">
-                      <h3 className="text-2xl">{room.name}</h3>
-                    </div>
-                  )}
-
-                  {/* Title after image for Classic Room */}
-                  {showDescription && (
-                    <div>
-                      <h4 className="text-xl">{room.name}</h4>
-                    </div>
-                  )}
-
-                  {/* View Room button for Premium Deluxe */}
-                  {showPrice && (
-                    <div className="flex justify-center pt-4">
-                      <button className="border border-black px-8 py-3 text-sm tracking-wide hover:bg-black hover:text-white transition-colors">
-                        View Room
-                      </button>
-                    </div>
-                  )}
+                  <div className="space-y-3">
+                    <h3 className="text-2xl">{room.name}</h3>
+                    <a
+                      href={BOOKING_URL}
+                      className="text-white bg-black px-10 py-2 text-xl"
+                    >
+                      Book Now
+                    </a>
+                  </div>
                 </div>
               );
             })}

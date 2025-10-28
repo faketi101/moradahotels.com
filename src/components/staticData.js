@@ -26,45 +26,44 @@ export const navigation = [
 export const roomsData = [
   {
     id: 1,
-    name: "Hollywooded (Twin Bed)",
-    category: "Hollywooded",
+    name: "Deluxe Room",
+    category: "Deluxe",
     description:
       "Our spacious accommodations are excellent for a trip with friends, family or as a couple. Each accommodation is fully equipped and furnished to create a pleasant and relaxing atmosphere.",
     price: "2123,4000",
-    image: "/images/hero.jpg",
+    image: "/images/rooms/deluxe-room.jpeg",
     features: ["Twin Bed", "Air Conditioning", "Free WiFi", "Room Service"],
   },
   {
     id: 2,
-    name: "Classic Room",
-    category: "Classic",
+    name: "Executive Room",
+    category: "Executive",
     description:
       "Our spacious accommodations are excellent for a trip with friends, family or as a couple. Each accommodation is fully equipped and furnished to create a pleasant and relaxing atmosphere.",
     price: "1899,0000",
-    image: "/images/welcome.jpg",
+    image: "/images/rooms/executive-room.jpeg",
     features: ["Queen Bed", "Air Conditioning", "Free WiFi", "Mini Bar"],
   },
   {
     id: 3,
-    name: "Classic Suite",
-    category: "Classic Suite",
+    name: "Superior Room",
+    category: "Superior",
     description:
       "Our spacious accommodations are excellent for a trip with friends, family or as a couple. Each accommodation is fully equipped and furnished to create a pleasant and relaxing atmosphere.",
     price: "2250,0000",
-    image: "/images/cta.jpg",
+    image: "/images/rooms/superior-room.jpeg",
     features: ["King Bed", "Living Area", "Free WiFi", "Balcony"],
   },
   {
     id: 4,
-    name: "Studio Room",
-    category: "Studio Room",
+    name: "Standard Room",
+    category: "Standard",
     description:
       "Our spacious accommodations are excellent for a trip with friends, family or as a couple. Each accommodation is fully equipped and furnished to create a pleasant and relaxing atmosphere.",
     price: "1750,0000",
-    image: "/images/hero.jpg",
+    image: "/images/rooms/standard-room.jpeg",
     features: ["Double Bed", "Kitchenette", "Free WiFi", "Work Desk"],
   },
-
 ];
 
 export const heroSlides = [
