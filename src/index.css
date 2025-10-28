@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 @import "tailwindcss";
 
 :root {
@@ -17,4 +18,11 @@ body {
   /* Regular (400), Light (300), Medium (500), Bold (700), Black (900) */
   font-style: normal;
   /* or italic */
+}
+
+.font-lato {
+  font-family: 'Lato', serif;
+  font-size: 15px;
+  text-transform: uppercase;
+  font-weight: 500;
 }

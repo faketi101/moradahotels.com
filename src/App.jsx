@@ -1,12 +1,15 @@
-import './App.css'
-
+import "./App.css";
+import Header from "./components/Header";
+import HomePage from "./pages/HomePage";
+import Footer from "./components/Footer";
 function App() {
 
   return (
     <>
-     <h1 className='text-3xl underline text-teal-500'>Hello world</h1>
+      <HomePage />
+      <Footer />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
