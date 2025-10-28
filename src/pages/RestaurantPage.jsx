@@ -2,6 +2,7 @@ import React from "react";
 import { BOOKING_URL, offers, heroSlides } from "../components/staticData";
 import PageHero from "../components/PageHero";
 import OffersComponent from "../components/OffersComponent";
+import { FadeUp } from "../components/AnimationWrappers";
 const RestaurantPage = () => {
   return (
     <>
@@ -22,16 +23,21 @@ const RestaurantPage = () => {
               />
             </div>
             <div className="md:h-[600px] flex flex-col justify-center items-center">
-              <h2 className="text-5xl text-center">
-                About the <br /> Moradahotels Restaurant
-              </h2>
-              <p className="text-2xl mt-6 text-center max-w-lg ">
-                A place to relax and feel at home. In every Westine Hotel you
-                find The Living, the beating heart of the hotel. Relax in our
-                homely bar & café after an exciting day in the city centre or a
-                meeting in our hotel. Enjoy cosy sofa’s, inspiring art and
-                delicious food and drinks.
-              </p>
+              <FadeUp>
+                {" "}
+                <h2 className="text-5xl text-center">
+                  About the <br /> Moradahotels Restaurant
+                </h2>
+              </FadeUp>
+              <FadeUp delay={0.2}>
+                <p className="text-2xl mt-6 text-center max-w-lg ">
+                  A place to relax and feel at home. In every Westine Hotel you
+                  find The Living, the beating heart of the hotel. Relax in our
+                  homely bar & café after an exciting day in the city centre or
+                  a meeting in our hotel. Enjoy cosy sofa’s, inspiring art and
+                  delicious food and drinks.
+                </p>
+              </FadeUp>
               <a
                 href={BOOKING_URL}
                 target="_blank"

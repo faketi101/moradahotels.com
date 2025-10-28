@@ -1,5 +1,6 @@
 import React from "react";
 import { BOOKING_URL } from "./staticData";
+import { FadeIn, FadeRight, FadeUp } from "./AnimationWrappers";
 
 const Hero = () => {
   return (
@@ -11,9 +12,11 @@ const Hero = () => {
         {/* Content (will stay above overlay) */}
         <div className="relative z-10 h-full ">
           <div className="flex items-center justify-center h-full flex-col pt-50 md:pt-0">
-            <h1 className="text-6xl text-white text-center">
-              Where Comfort <br /> Meets Elegance
-            </h1>
+            <FadeUp>
+              <h1 className="text-6xl text-white text-center">
+                Where Comfort <br /> Meets Elegance
+              </h1>
+            </FadeUp>
             <div className="mt-24">
               <form className="flex items-center justify-center gap-4 flex-wrap flex-col md:flex-row">
                 <div className="flex flex-col">

@@ -6,6 +6,8 @@ import ContactSection from "../components/ContactSection";
 
 import { BOOKING_URL } from "../components/staticData";
 import OffersComponent from "../components/OffersComponent";
+
+import { FadeIn, FadeRight, FadeUp } from "../components/AnimationWrappers";
 const HomePage = () => {
   return (
     <>
@@ -20,31 +22,38 @@ const HomePage = () => {
                 alt="welcome image"
               />
             </div>
-            <div className="md:h-[600px] flex flex-col justify-center items-center">
-              <h2 className="text-5xl text-center">
-                Welcome to <br />
-                Morada Hotels
-              </h2>
-              <p className="text-2xl mt-6 text-center max-w-lg ">
-                MORADA HOTELS combines comfort and charm in every stay. Nestled
-                in picturesque surroundings, our boutique accommodations offer a
-                perfect retreat for travellers seeking relaxation and adventure.
-                Each room is thoughtfully designed to provide a cozy atmosphere,
-                ensuring you feel right at home. Enjoy personalized service and
-                a warm, welcoming environment as you explore local attractions
-                or unwind in our serene spaces. At MORADA HOTELS, we create
-                memorable experiences, whether you’re here for a weekend getaway
-                or an extended stay. Discover the essence of hospitality that
-                sets us apart!
-              </p>
-              <a
-                href={BOOKING_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="bg-black text-4xl text-white px-8 py-4 border border-black mt-16"
-              >
-                Book Now
-              </a>
+            <div className="md:min-h-[800px] flex flex-col justify-center items-center">
+              <FadeUp>
+                <h2 className="text-6xl text-center md:mt-20">
+                  Welcome to <br />
+                  Morada Hotels
+                </h2>
+              </FadeUp>
+              <FadeUp delay={0.2}>
+                <p className="text-2xl mt-6 text-center max-w-lg ">
+                  MORADA HOTELS combines comfort and charm in every stay.
+                  Nestled in picturesque surroundings, our boutique
+                  accommodations offer a perfect retreat for travellers seeking
+                  relaxation and adventure. Each room is thoughtfully designed
+                  to provide a cozy atmosphere, ensuring you feel right at home.
+                  Enjoy personalized service and a warm, welcoming environment
+                  as you explore local attractions or unwind in our serene
+                  spaces. At MORADA HOTELS, we create memorable experiences,
+                  whether you’re here for a weekend getaway or an extended stay.
+                  Discover the essence of hospitality that sets us apart!
+                </p>
+              </FadeUp>
+
+              <FadeRight className="mt-20">
+                <a
+                  href={BOOKING_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-black text-4xl text-white px-8 py-4 border border-black mt-16"
+                >
+                  Book Now
+                </a>
+              </FadeRight>
             </div>
           </div>
         </div>

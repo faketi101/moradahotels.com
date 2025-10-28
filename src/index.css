@@ -26,3 +26,6 @@ body {
   text-transform: uppercase;
   font-weight: 500;
 }
+h1,p{
+  line-height: 1.5;
+}

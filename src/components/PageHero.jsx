@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-
+import { FadeUp } from "./AnimationWrappers";
 const RoomsHero = ({ heroSlides, pageName }) => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
@@ -43,7 +43,10 @@ const RoomsHero = ({ heroSlides, pageName }) => {
 
           {/* Content */}
           <div className="relative z-10 h-full flex items-center justify-center flex-col text-center">
-            <h1 className="text-6xl md:text-7xl text-white">{pageName}</h1>
+            <FadeUp>
+              {" "}
+              <h1 className="text-6xl md:text-7xl text-white">{pageName}</h1>
+            </FadeUp>
           </div>
         </div>
       ))}
