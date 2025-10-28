@@ -46,7 +46,7 @@ const HomePage = () => {
                 alt="welcome image"
               />
             </div>
-            <div className="h-[600px] flex flex-col justify-center items-center">
+            <div className="md:h-[600px] flex flex-col justify-center items-center">
               <h2 className="text-5xl text-center">
                 Welcome to <br />
                 Morada Hotels

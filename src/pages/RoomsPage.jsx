@@ -28,7 +28,7 @@ const RoomsPage = () => {
             {roomCategories.map((category) => (
               <div
                 key={category}
-                className="py-10 max-w-[200px] border-r last:border-0 border-gray-200"
+                className="py-10 max-w-[200px] md:border-r last:border-0 border-gray-200"
               >
                 <button className="text-2xl font-light tracking-wide hover:opacity-60 transition-opacity px-5">
                   {category}

@@ -56,10 +56,10 @@ const Services = () => {
           {services.map((service, index) => {
             const Icon = service.icon;
             return (
-              <div key={index} className="flex flex-col items-start">
+              <div key={index} className="flex flex-col md:items-start items-center">
                 <Icon size={48} className="text-black mb-4" strokeWidth={1.5} />
                 <h3 className="text-2xl mb-3">{service.title}</h3>
-                <p className="text-lg leading-relaxed">{service.description}</p>
+                <p className="text-lg leading-relaxed md:text-left text-center">{service.description}</p>
               </div>
             );
           })}
