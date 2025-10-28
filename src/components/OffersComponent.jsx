@@ -27,7 +27,8 @@ const OffersComponent = () => {
                       {offer.description}
                     </p>
                   </FadeUp>
-                  <FadeUp delay={0.4}>
+                  {/* Removed as revision 2 */}
+                  {/* <FadeUp delay={0.4}>
                     <a
                       className="text-center text-2xl text-black "
                       href={offer.link}
@@ -35,7 +36,7 @@ const OffersComponent = () => {
                       <ArrowRight size={24} className="inline font-bold" />{" "}
                       {offer.link_title}
                     </a>
-                  </FadeUp>
+                  </FadeUp> */}
                 </div>
               </div>
             </FadeLeft>

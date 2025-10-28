@@ -3,6 +3,7 @@ import Hero from "../components/Hero";
 import CTA_TEXT from "../components/CTA_TEXT";
 import Services from "../components/Services";
 import ContactSection from "../components/ContactSection";
+import RoomGallery from "../components/RoomGallery";
 
 import { BOOKING_URL } from "../components/staticData";
 import OffersComponent from "../components/OffersComponent";
@@ -12,7 +13,8 @@ const HomePage = () => {
   return (
     <>
       <Hero />
-      <section>
+      <RoomGallery />
+      {/* <section>
         <div className="container mx-auto px-4 py-16">
           <div className="flex flex-col md:flex-row gap-8 items-center justify-center">
             <div className="h-[600px]">
@@ -57,7 +59,7 @@ const HomePage = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       <Services />
 

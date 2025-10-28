@@ -39,8 +39,8 @@ const Footer = () => {
 
         {/* Right: Address */}
         <div className="text-center md:text-right text-gray-300 text-2xl">
-          <p>Morada Hotels</p>
-          <p>16 Babatunde Dabiri Street, Lekki Phase 1</p>
+          <p>Morada Hotels Ltd</p>
+          <p>21 Abel Oreniyi St, Opebi, Ikeja, Lagos 100281</p>
           <p>
             <a href="tel:+2348186604488" className="hover:text-white">
               +234 818 660 4488
@@ -59,9 +59,11 @@ const Footer = () => {
       </div>
 
       {/* Bottom Section */}
-      <div className="max-w-7xl mx-auto px-6 py-6 flex flex-col md:flex-row items-center justify-between text-sm text-gray-400 font-lato">
-        {/* Social Icons */}
-        <div className="flex space-x-4 mb-4 md:mb-0">
+      <div className="max-w-7xl mx-auto px-6 py-6 flex flex-col md:flex-row items-center justify-between text-sm text-gray-400">
+        {/* Removed for revisoin 2 */}
+        {/* add copyright text */}
+        <p className="text-lg">Copyright © {new Date().getFullYear()} Morada Hotels Ltd. All Rights Reserved.</p>
+        {/* <div className="flex space-x-4 mb-4 md:mb-0">
           <a href="#" className="text-white">
             <Facebook />
           </a>
@@ -73,7 +75,7 @@ const Footer = () => {
           </a>
         </div>
 
-        {/* Links */}
+        
         <div className="flex flex-wrap justify-center space-x-4 uppercase tracking-wide">
           <a href="#" className="text-white">
             Privacy
@@ -87,7 +89,7 @@ const Footer = () => {
           <a href="#" className="text-white">
             Contact
           </a>
-        </div>
+        </div> */}
       </div>
     </footer>
   );
