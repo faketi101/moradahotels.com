@@ -11,7 +11,7 @@ export const navigation = [
   },
   {
     name: "Restraunt",
-    href: "/restaraunt",
+    href: "/restaurant",
   },
   {
     name: "Book Now",
@@ -78,5 +78,31 @@ export const heroSlides = [
     image: "/images/cta.jpg",
     title: "Your Perfect Stay",
     subtitle: "Discover Our Collection",
+  },
+];
+
+export const offers = [
+  {
+    name: "Gift Voucher",
+    img: "/images/offer-gift.jpg",
+    description:
+      "Surprise colleagues or relations with the Morada Gift Voucher.",
+    link: "#",
+    link_title: "Read more",
+  },
+  {
+    name: "Special offers",
+    img: "/images/offer-special.jpg",
+    description:
+      "Surprise colleagues or relations with the Morada Gift Voucher.",
+    link: "#",
+    link_title: "View offers",
+  },
+  {
+    name: "Discover Morada",
+    img: "/images/offer-discover.jpg",
+    description: "Explore the Morada Hotels & Spa in Lekki Phase 1 and Lagos",
+    link: "#",
+    link_title: "Read more",
   },
 ];

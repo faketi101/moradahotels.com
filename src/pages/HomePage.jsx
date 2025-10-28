@@ -3,35 +3,9 @@ import Hero from "../components/Hero";
 import CTA_TEXT from "../components/CTA_TEXT";
 import Services from "../components/Services";
 import ContactSection from "../components/ContactSection";
-import { ArrowRight } from "lucide-react";
+
 import { BOOKING_URL } from "../components/staticData";
-
-const offers = [
-  {
-    name: "Gift Voucher",
-    img: "/images/offer-gift.jpg",
-    description:
-      "Surprise colleagues or relations with the Morada Gift Voucher.",
-    link: "#",
-    link_title: "Read more",
-  },
-  {
-    name: "Special offers",
-    img: "/images/offer-special.jpg",
-    description:
-      "Surprise colleagues or relations with the Morada Gift Voucher.",
-    link: "#",
-    link_title: "View offers",
-  },
-  {
-    name: "Discover Morada",
-    img: "/images/offer-discover.jpg",
-    description: "Explore the Morada Hotels & Spa in Lekki Phase 1 and Lagos",
-    link: "#",
-    link_title: "Read more",
-  },
-];
-
+import OffersComponent from "../components/OffersComponent";
 const HomePage = () => {
   return (
     <>
@@ -106,36 +80,7 @@ Book your stay today and experience the best with us!"
 
       {/*  */}
 
-      <section>
-        {/* this section will loop the offers array top image then name then description then link 
-        match the design*/}
-        <div className="container mx-auto px-4 py-16">
-          <div className="flex flex-col md:flex-row gap-8 items-center justify-center">
-            {offers.map((offer) => (
-              <div className="flex flex-col items-center" key={offer.name}>
-                <img
-                  className="w-auto max-w-[300px] h-[500px] object-cover"
-                  src={offer.img}
-                  alt={offer.name}
-                />
-                <div className="flex flex-col items-center">
-                  <h2 className="text-4xl mt-6 text-center">{offer.name}</h2>
-                  <p className="text-center my-10 text-lg max-w-[350px]">
-                    {offer.description}
-                  </p>
-                  <a
-                    className="text-center text-2xl text-black "
-                    href={offer.link}
-                  >
-                    <ArrowRight size={24} className="inline font-bold" />{" "}
-                    {offer.link_title}
-                  </a>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <OffersComponent />
       <ContactSection />
     </>
   );

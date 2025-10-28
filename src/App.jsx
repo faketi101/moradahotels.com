@@ -7,7 +7,7 @@ import HomePage from "./pages/HomePage";
 import RoomsPage from "./pages/RoomsPage";
 import ContactPage from "./pages/ContactPage";
 import Footer from "./components/Footer";
-
+import RestaurantPage from "./pages/RestaurantPage";
 function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
@@ -85,6 +85,7 @@ function App() {
             <Route path="/" element={<HomePage />} />
             <Route path="/rooms" element={<RoomsPage />} />
             <Route path="/contact" element={<ContactPage />} />
+            <Route path="/restaurant" element={<RestaurantPage />} />
           </Routes>
           <Footer />
         </div>

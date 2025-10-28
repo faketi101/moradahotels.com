@@ -87,9 +87,6 @@ const Footer = () => {
           <a href="#" className="text-white">
             Contact
           </a>
-          <a href="#" className="text-white">
-            Designed by Hyfig
-          </a>
         </div>
       </div>
     </footer>
