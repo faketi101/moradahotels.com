@@ -64,8 +64,11 @@ Book your stay today and experience the best with us!"
       />
 
       <section
-        className="h-[600px] bg-center bg-cover bg-fixed md:bg-fixed bg-scroll"
-        style={{ backgroundImage: 'url("/images/cta.jpg")' }}
+        className="h-[600px] bg-center bg-cover bg-fixed"
+        style={{
+          backgroundImage: 'url("/images/cta.jpg")',
+          backgroundAttachment: "fixed",
+        }}
       ></section>
 
       {/*  */}

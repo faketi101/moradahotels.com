@@ -63,16 +63,24 @@ function App() {
       >
         <div
           className="transition-all duration-500 ease-in-out"
-          style={{
-            width: "100%",
-            minHeight: "100vh",
-            backfaceVisibility: "hidden",
-            transform: isMenuOpen
-              ? "translateZ(0px) translateX(10%) rotateY(-25deg)"
-              : "translateZ(0px) translateX(0%) rotateY(0deg)",
-            transformStyle: "preserve-3d",
-            transformOrigin: "center right",
-          }}
+          style={
+            isMenuOpen
+              ? {
+                  width: "100%",
+                  minHeight: "100vh",
+                  backfaceVisibility: "hidden",
+                  transform: "translateX(10%) rotateY(-25deg)",
+                  transformStyle: "preserve-3d",
+                  transformOrigin: "center right",
+                  willChange: "transform",
+                }
+              : {
+                  width: "100%",
+                  minHeight: "100vh",
+                  transform: "none",
+                  transformOrigin: "center right",
+                }
+          }
         >
           {/* Header inside 3D transform - part of the page */}
           <Header
