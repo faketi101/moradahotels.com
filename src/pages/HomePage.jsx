@@ -2,6 +2,7 @@ import React from "react";
 import Hero from "../components/Hero";
 import CTA_TEXT from "../components/CTA_TEXT";
 import Services from "../components/Services";
+import ContactSection from "../components/ContactSection";
 import { ArrowRight } from "lucide-react";
 import { BOOKING_URL } from "../components/staticData";
 
@@ -135,6 +136,7 @@ Book your stay today and experience the best with us!"
           </div>
         </div>
       </section>
+      <ContactSection />
     </>
   );
 };

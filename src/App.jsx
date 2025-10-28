@@ -5,6 +5,7 @@ import Header from "./components/Header";
 import Sidebar from "./components/Sidebar";
 import HomePage from "./pages/HomePage";
 import RoomsPage from "./pages/RoomsPage";
+import ContactPage from "./pages/ContactPage";
 import Footer from "./components/Footer";
 
 function App() {
@@ -83,6 +84,7 @@ function App() {
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/rooms" element={<RoomsPage />} />
+            <Route path="/contact" element={<ContactPage />} />
           </Routes>
           <Footer />
         </div>

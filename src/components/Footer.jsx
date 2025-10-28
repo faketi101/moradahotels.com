@@ -39,10 +39,22 @@ const Footer = () => {
 
         {/* Right: Address */}
         <div className="text-center md:text-right text-gray-300 text-2xl">
-          <p>Morada Hotels & Spa</p>
+          <p>Morada Hotels</p>
           <p>16 Babatunde Dabiri Street, Lekki Phase 1</p>
-          <p>+234 706 663 4422, +234 906 111 1000</p>
-          <p>reservations@Moradahotels.ng</p>
+          <p>
+            <a href="tel:+2348186604488" className="hover:text-white">
+              +234 818 660 4488
+            </a>
+            ,{" "}
+            <a href="tel:+2349169890105" className="hover:text-white">
+              +234 916 989 0105
+            </a>
+          </p>
+          <p>
+            <a href="mailto:info@moradahotels.com" className="hover:text-white">
+              info@moradahotels.com
+            </a>
+          </p>
         </div>
       </div>
 
