@@ -10,10 +10,6 @@ export const navigation = [
     href: "/rooms",
   },
   {
-    name: "Restraunt",
-    href: "/restaurant",
-  },
-  {
     name: "Book Now",
     href: BOOKING_URL,
   },

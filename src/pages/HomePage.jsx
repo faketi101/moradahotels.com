@@ -62,17 +62,37 @@ const HomePage = () => {
       </section> */}
 
       <Services />
+      <section>
+        <div className="container mx-auto px-4 py-16">
+          <div className="w-full flex flex-col justify-center items-center">
+            <FadeUp>
+              <h2 className="text-5xl text-center">Why Choose US</h2>
+            </FadeUp>
+            <FadeUp delay={0}>
+              <p className="text-2xl mt-6 text-center max-w-3xl">
+                At MORADA HOTELS, &nbsp; we offer a welcoming stay with
+                unbeatable comfort and exceptional service. &nbsp; &nbsp;Located
+                in the Serene and secure neighborhood of Awuse estate,
+                &nbsp;Opebi, &nbsp; Ikeja,  &nbsp;Lagos, &nbsp; our hotel provides easy
+                access to Murtala Muhammed airport.  &nbsp;&nbsp;Enjoy modern rooms,
+                &nbsp; top-notch amenities, and a dedicated team that ensures
+                your stay is relaxing and stress-free.&nbsp; &nbsp;Whether you're here for
+                business or leisure, &nbsp; we make it easy to feel at home.&nbsp; &nbsp; Book your
+                stay today and experience the best with us!
+              </p>
+            </FadeUp>
 
-      <CTA_TEXT
-        title="Why Choose US"
-        description="At MORADA HOTELS, we offer a welcoming stay with unbeatable comfort and exceptional service. Located in the Serene and secure neighborhood of Awuse estate,Opebi,Ikeja,Lagos, our hotel provides easy access to Murtala Muhammed airport. Enjoy modern rooms, top-notch amenities, and a dedicated team that ensures your stay is relaxing and stress-free. Whether you're here for business or leisure, we make it easy to feel at home.
-
-Book your stay today and experience the best with us!"
-        button={{
-          href: BOOKING_URL,
-          text: "BOOK NOW",
-        }}
-      />
+            <FadeUp className="mt-10">
+              <a
+                href={BOOKING_URL}
+                className="bg-transparent text-2xl text-black px-8 py-4 border-2 border-black mt-16"
+              >
+                BOOK NOW
+              </a>
+            </FadeUp>
+          </div>
+        </div>
+      </section>
 
       <section
         className="h-[600px] bg-center bg-cover bg-fixed"
@@ -84,12 +104,9 @@ Book your stay today and experience the best with us!"
 
       {/*  */}
       <CTA_TEXT
-        title="Our Dining Restaurant"
-        description="The highly-rated restaurant of our hotel is acknowledged with several awards. Let our chefs surprise you with their culinary highlights."
-        button={{
-          href: "/restraunt",
-          text: "VIEW OUR RESTAURANT",
-        }}
+        title="Our Kitchen"
+        description="Our highly-rated chefs have been acknowledged in several awards over the years. Let our chefs surprise you with their Nigerian and Continental culinary highlights."
+        button={false}
       />
 
       {/*  */}

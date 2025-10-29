@@ -16,18 +16,20 @@ const CTA_TEXT = ({ title, description, button }) => {
             <h2 className="text-5xl text-center">{title}</h2>
           </FadeUp>
           <FadeUp delay={0}>
-            <p className="text-2xl mt-6 text-center max-w-3xl ">
+            <p className="text-2xl mt-6 text-center max-w-3xl">
               {description}
             </p>
           </FadeUp>
-          <FadeUp className="mt-10">
-            <a
-              href={button.href}
-              className="bg-transparent text-2xl text-black px-8 py-4 border-2 border-black mt-16"
-            >
-              {button.text}
-            </a>
-          </FadeUp>
+          {button && (
+            <FadeUp className="mt-10">
+              <a
+                href={button.href}
+                className="bg-transparent text-2xl text-black px-8 py-4 border-2 border-black mt-16"
+              >
+                {button.text}
+              </a>
+            </FadeUp>
+          )}
         </div>
       </div>
     </section>

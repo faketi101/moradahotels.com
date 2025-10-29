@@ -28,9 +28,9 @@ const services = [
   },
   {
     icon: UtensilsCrossed,
-    title: "Restaurant & Bar",
+    title: "Outdoor Bar",
     description:
-      "Savor delicious meals at our on-site restaurant and unwind with a refreshing drink at our bar.",
+      "Relax in our open outdoor bar day or night with ice-cold drinks served throughout the day.",
   },
   {
     icon: Plane,

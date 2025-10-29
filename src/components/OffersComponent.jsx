@@ -18,7 +18,7 @@ const OffersComponent = () => {
                   alt={offer.name}
                 />
                 <div className="flex flex-col items-center">
-                  <FadeUp>
+                  {/* <FadeUp>
                     <h2 className="text-4xl mt-6 text-center">{offer.name}</h2>
                   </FadeUp>
                   <FadeUp delay={0.2}>
@@ -26,7 +26,7 @@ const OffersComponent = () => {
                     <p className="text-center my-10 text-lg max-w-[350px]">
                       {offer.description}
                     </p>
-                  </FadeUp>
+                  </FadeUp> */}
                   {/* Removed as revision 2 */}
                   {/* <FadeUp delay={0.4}>
                     <a
