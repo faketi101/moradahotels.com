@@ -13,7 +13,7 @@ const Header = ({ isHero, isMenuOpen, setIsMenuOpen, isFixed = true }) => {
         <div className="flex items-center justify-between h-16 px-4 sm:px-6 lg:px-8">
           <div className="flex-shrink-0">
             <img
-              className="w-[180px] h-auto"
+              className="w-[160px] h-auto"
               src="/images/logo.png"
               alt="Your Company"
             />
