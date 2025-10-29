@@ -33,7 +33,7 @@ const RoomGallery = () => {
     <section className="py-16 bg-gray-50">
       <div className="container mx-auto px-4">
         <FadeIn>
-          <h2 className="text-5xl md:text-6xl text-center mb-4">Our Rooms</h2>
+          <h2 className="text-5xl md:text-6xl text-center mb-4">Welcome to <br /> MORADA HOTELS</h2>
           <p className="text-xl text-center text-gray-600 mb-12 max-w-2xl mx-auto">
             Discover our carefully curated selection of rooms, each designed to
             provide the perfect blend of comfort and elegance
