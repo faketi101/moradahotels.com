@@ -76,11 +76,11 @@ const ContactSection = () => {
                   <div className="space-y-3">
                     <div>
                       <p className="text-lg font-medium">Check-in Time</p>
-                      <p className="text-gray-700">12:30 – 16:00 GMT</p>
+                      <p className="text-gray-700">From 13:00 GMT</p>
                     </div>
                     <div>
                       <p className="text-lg font-medium">Check-out Time</p>
-                      <p className="text-gray-700">06:00 – 12:00 GMT</p>
+                      <p className="text-gray-700">12:00 (noon) GMT</p>
                     </div>
                   </div>
                 </div>
